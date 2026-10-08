@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gerAI — Viskas bus gerAI</title>
+<meta name="description" content="DI diegimas, mokymai ir konsultacijos. Jokio hype'o. Tik praktika. 🚀 (Parodija.)">
+<meta property="og:title" content="gerAI — Viskas bus gerAI">
+<meta property="og:description" content="Padedame Lietuvos įmonėms įdiegti dirbtinį intelektą per 30 dienų. Arba per 30 minučių. (Parodija.)">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://alaburda.github.io/gerai-lt/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="gerAI – Viskas bus gerAI. Šaltibarščių dubuo su P.I.N.K. kiaušiniais.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fdf0f5">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="g-garnish" viewBox="0 0 220 34">
+    <g fill="none" stroke="#6a9b3a" stroke-width="2" stroke-linecap="round">
+      <path d="M2 22 C 24 20, 46 16, 66 9"/>
+      <path d="M14 21 l-4 -7 M14 21 l3 -7 M26 19 l-4 -8 M26 19 l5 -6 M38 17 l-3 -8 M38 17 l6 -5 M50 13 l-2 -7 M50 13 l6 -3 M60 10 l1 -6"/>
+      <path d="M218 22 C 196 20, 174 16, 154 9"/>
+      <path d="M206 21 l4 -7 M206 21 l-3 -7 M194 19 l4 -8 M194 19 l-5 -6 M182 17 l3 -8 M182 17 l-6 -5 M170 13 l2 -7 M170 13 l-6 -3 M160 10 l-1 -6"/>
+    </g>
+    <g stroke="#4d7c0f" stroke-width="2.5"><circle cx="82" cy="17" r="10" fill="#e6f9c4"/><circle cx="138" cy="17" r="10" fill="#e6f9c4"/></g>
+    <g fill="#c5e89a"><circle cx="82" cy="12" r="1.6"/><circle cx="86.5" cy="19" r="1.6"/><circle cx="77.5" cy="19" r="1.6"/><circle cx="138" cy="12" r="1.6"/><circle cx="142.5" cy="19" r="1.6"/><circle cx="133.5" cy="19" r="1.6"/></g>
+    <ellipse cx="110" cy="17" rx="17" ry="12" fill="#fff8e7"/>
+    <circle cx="110" cy="17" r="7.5" fill="#fbbf24"/>
+  </symbol>
+</svg>
+
+<div class="topbar">
+  <span class="pulse" aria-hidden="true"></span>
+  <span><strong>NAUJA:</strong> DI Sodyba × Šaltibarščių festivalis 2027<span class="tb-extra"> · Liko <b>3</b> vietos pirtyje</span> · Registracija baigiasi po <span id="countdown" class="mono">14:59</span></span>
+</div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#" class="logo no-term" aria-label="gerAI pradžia">ger<span class="grad">AI</span><span class="logo-tld">.lt</span></a>
+    <nav class="links" aria-label="Pagrindinė navigacija">
+      <a href="#metodas">Metodas</a>
+      <a href="#rezultatai">Rezultatai</a>
+      <a href="#programos">Programos</a>
+      <a href="#irankiai">Įrankiai</a>
+      <a href="#komanda">Komanda</a>
+      <a href="#duk">DUK</a>
+    </nav>
+    <div class="nav-right">
+      <div class="seg no-term" role="group" aria-label="Terminija">
+        <button type="button" data-term="DI" class="on" aria-pressed="true">DI</button><button type="button" data-term="AI" aria-pressed="false">AI</button><button type="button" data-term="SI" aria-pressed="false" title="Superintelektas">SI</button>
+      </div>
+      <div class="seg no-term" role="group" aria-label="Kalba">
+        <button type="button" data-lang="lt" class="on" aria-pressed="true">LT</button><button type="button" data-lang="corp" aria-pressed="false">Corporate</button>
+      </div>
+      <a class="btn btn-primary btn-sm js-book nav-cta" href="#pokalbis" data-corp="Book'inti call'ą">Rezervuoti 20 min.</a>
+      <button type="button" class="menu-btn no-term" id="menu-btn" aria-label="Meniu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="pill" data-corp="🚀 No hype. Just practice'as. 🚀">🚀 Jokio hype'o. Tik praktika. 🚀</span>
+      <h1 data-corp="Leverage'iname <span class=&quot;grad&quot;>AI</span>, kad jūsų business'as scale'intųsi.">Viskas bus <span class="grad no-term">gerAI</span>.</h1>
+      <p class="lead" data-corp="Darome end-to-end AI adoption'ą su proprietary P.I.N.K.™ framework'u. Real impact'as, measurable ROI, zero fluff'o.">Diegiame dirbtinį intelektą Lietuvos įmonėse pagal mūsų patentuotą* P.I.N.K.<sup>™</sup> metodą. Per 30 dienų. Arba per 30 minučių. Arba per 30 sekundžių, jei sumokėsite iš anksto.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary js-book" href="#pokalbis" data-corp="Book'inti 20 min. call'ą">Rezervuoti 20 min. pokalbį</a>
+        <a class="btn btn-ghost" href="#metodas">Kaip veikia P.I.N.K.™ →</a>
+      </div>
+      <ul class="pink-strip" aria-label="P.I.N.K. metodo žingsniai">
+        <li><b>P</b>Promptas</li><li><b>I</b>Iteracija</li><li><b>N</b>Naujiena LinkedIne</li><li><b>K</b>Kaina</li>
+      </ul>
+      <p class="trust">Mumis pasitiki <b>200+ top klientų</b>*<br><small>*top – mūsų nuomone. *Metodas nepatentuotas.</small></p>
+    </div>
+    <div class="hero-side">
+    <div class="hero-visual" aria-hidden="true">
+      <div class="ring"></div>
+      <div class="ring ring-2"></div>
+      <svg class="bowl-top" viewBox="0 0 400 400">
+        <defs>
+          <radialGradient id="soupTop" cx=".42" cy=".38" r=".7">
+            <stop offset="0" stop-color="#ffc6e2"/>
+            <stop offset=".45" stop-color="#f472b6"/>
+            <stop offset=".8" stop-color="#db2777"/>
+            <stop offset="1" stop-color="#9d174d"/>
+          </radialGradient>
+          <radialGradient id="rimTop" cx=".5" cy=".5" r=".5">
+            <stop offset=".86" stop-color="#f6e9ef"/>
+            <stop offset="1" stop-color="#ffffff"/>
+          </radialGradient>
+        </defs>
+        <circle cx="200" cy="200" r="196" fill="url(#rimTop)"/>
+        <circle cx="200" cy="200" r="172" fill="url(#soupTop)"/>
+        <g class="stir">
+          <path d="M200 200 m0 -20 a20 20 0 1 1 -1 0 m1 -26 a46 46 0 1 0 1 0 m-1 -30 a76 76 0 1 1 -1 0" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="5" stroke-linecap="round"/>
+          <g fill="#ecfccb" stroke="#65a30d" stroke-width="3">
+            <circle cx="120" cy="150" r="13"/><circle cx="292" cy="250" r="12"/><circle cx="250" cy="96" r="11"/><circle cx="150" cy="298" r="12"/><circle cx="310" cy="160" r="10"/>
+          </g>
+          <g stroke="#3f6212" stroke-width="2.5" fill="none" stroke-linecap="round">
+            <path d="M96 222 l12 -7 m-6 3 l2 -8 m-2 8 l8 1"/><path d="M262 312 l-11 -6 m5 3 l-1 -8"/><path d="M204 150 l10 -6 m-5 3 l1 -7"/><path d="M300 110 l-10 6 m5 -3 l-2 8"/>
+          </g>
+          <g font-family="Space Grotesk, sans-serif" font-weight="700" font-size="20" text-anchor="middle" fill="#3b2304">
+            <g transform="translate(170 118)"><ellipse rx="36" ry="24" fill="#fff"/><circle r="16" fill="#fbbf24"/><text y="7">P</text></g>
+            <g transform="translate(284 196)"><ellipse rx="36" ry="24" fill="#fff"/><circle r="16" fill="#fbbf24"/><text y="7">I</text></g>
+            <g transform="translate(222 286)"><ellipse rx="36" ry="24" fill="#fff"/><circle r="16" fill="#fbbf24"/><text y="7">N</text></g>
+            <g transform="translate(114 236)"><ellipse rx="36" ry="24" fill="#fff"/><circle r="16" fill="#fbbf24"/><text y="7">K</text></g>
+          </g>
+        </g>
+      </svg>
+      <span class="chip c1">Agentai</span>
+      <span class="chip c2 chip-green">🌿 Krapai įskaičiuoti</span>
+      <span class="chip c3">ROI ∞</span>
+      <span class="chip c4">Transformacija</span>
+      <span class="chip c5 dead" data-year="2021">Blockchain</span>
+      <span class="chip c6 dead" data-year="2022">Metaverse</span>
+      <span class="chip c7">Automatizacija</span>
+      <span class="chip c8">SI 🔜</span>
+    </div>
+    <div class="serve">
+      <span>Patiekti:</span>
+      <div class="seg no-term" role="group" aria-label="Patiekimo temperatūra">
+        <button type="button" data-temp="cold" class="on" aria-pressed="true">❄️ Šaltus</button><button type="button" data-temp="hot" aria-pressed="false">🔥 Karštus</button>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>🚀 REVOLIUCIJA</span><span>🥒 TRANSFORMACIJA</span><span>🚀 DISRUPCIJA</span><span>🥚 AGENTAI</span><span>🌿 SINERGIJA</span><span>🥣 P.I.N.K.™</span><span>🥒 ATEITIS</span><span>🚀 REVOLIUCIJA</span>
+    <span>🚀 REVOLIUCIJA</span><span>🥒 TRANSFORMACIJA</span><span>🚀 DISRUPCIJA</span><span>🥚 AGENTAI</span><span>🌿 SINERGIJA</span><span>🥣 P.I.N.K.™</span><span>🥒 ATEITIS</span><span>🚀 REVOLIUCIJA</span>
+  </div>
+</div>
+
+<!-- LIVE COUNTER -->
+<section class="counter-band">
+  <div class="wrap">
+    <p data-corp="Kol scroll'inate, jūsų competitor'iai jau save'ino">Kol skaitote šį puslapį, jūsų konkurentai jau sutaupė</p>
+    <div class="big grad" id="competitors">0</div>
+    <p>valandų naudodami DI. <span class="muted" id="you">Jūs – 0.</span></p>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section" id="skaiciai">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Skaičiai</span>
+      <h2 data-corp="Time-to-value'as eina į minusą">Mūsų klientai jau dirba <span class="grad">minus valandų</span></h2>
+      <p>Vidutinis valandų skaičius per savaitę, kurį vadovas sugaišta rutininėms užduotims. Duomenys tikri*.</p>
+      <p class="note">*tiesiškai ekstrapoliuoti iš dviejų taškų</p>
+    </div>
+
+    <figure class="card chart-card">
+      <div class="chart-wrap" id="hours-chart"></div>
+      <figcaption class="chart-foot">
+        <span>R² = 1,00 <small>(pašalinome nepatogius taškus)</small></span>
+        <span>Šaltinis: mūsų klientų apklausa, n = 2</span>
+      </figcaption>
+      <table class="sr-only">
+        <caption>Valandos per savaitę rutininėms užduotims</caption>
+        <thead><tr><th>Metai</th><th>Valandos</th></tr></thead>
+        <tbody>
+          <tr><td>2022</td><td>40</td></tr><tr><td>2023</td><td>31</td></tr><tr><td>2024</td><td>17</td></tr>
+          <tr><td>2025</td><td>4</td></tr><tr><td>2026</td><td>−6</td></tr><tr><td>2027 (prognozė)</td><td>−22</td></tr><tr><td>2028 (prognozė)</td><td>−45</td></tr>
+        </tbody>
+      </table>
+    </figure>
+  </div>
+  <div class="wrap stats">
+    <div class="stat"><div class="num" data-count="14000" data-tick="1" data-every="900" data-suffix="+">0</div><div class="lbl">mokymų dalyvių<small>(įskaitant pasikartojančius)</small></div></div>
+    <div class="stat"><div class="num">4,97<span class="of">/5</span></div><div class="lbl">vidutinis įvertinimas<small>(šaltinis: mes)</small></div></div>
+    <div class="stat"><div class="num">98%</div><div class="lbl">rekomenduotų<small>(1,96 iš 2 apklaustųjų)</small></div></div>
+    <div class="stat"><div class="num" data-count="4000000" data-tick="137" data-every="120">0</div><div class="lbl">sutaupytų valandų<small>(apskaičiavo ChatGPT)</small></div></div>
+  </div>
+</section>
+
+<!-- NEBŪK -->
+<section class="nebuk">
+  <div class="wrap center">
+    <span class="eyebrow">Mūsų šūkis</span>
+    <h2 class="nebuk-h" data-corp="Nebūk <span class=&quot;animal grad&quot; id=&quot;animal&quot;>dinozauras</span>.<br>Use'ink AI.">Nebūk <span class="animal grad" id="animal">dinozauras</span>.<br>Naudok DI.</h2>
+    <p class="animal-why" id="animal-why">Dinozaurai irgi manė, kad dar turi laiko.</p>
+    <p class="note">Šūkį sukūrė DI. Nė vienas gyvūnas nenukentėjo. Ožys vis dar priešinasi.</p>
+  </div>
+</section>
+
+<div class="garnish" aria-hidden="true"><svg><use href="#g-garnish"/></svg></div>
+
+<!-- METODAS -->
+<section id="metodas">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Metodas</span>
+      <h2>P.I.N.K.<sup>™</sup> metodas</h2>
+      <p data-corp="Mūsų proprietary 4-step framework'as AI enablement'ui. Locally sourced, served cold.">Mūsų patentuotas* 4 žingsnių DI diegimo karkasas. Kaip ir šaltibarščiai: ryški spalva, puikiai atrodo Instagrame, o viduje – tie patys burokėliai, kaip pas visus.</p>
+      <p class="note">*nepatentuotas</p>
+    </div>
+
+    <svg class="soup" viewBox="0 0 760 300" role="img" aria-label="Metodo diagrama: šaltibarščių dubuo, kuriame plaukioja kiaušinių puselės su raidėmis P, I, N ir K, o šalia – lėkštė bulvių">
+      <defs>
+        <radialGradient id="soupG" cx=".45" cy=".35" r=".75">
+          <stop offset="0" stop-color="#ffa3d2"/>
+          <stop offset=".55" stop-color="#f0569f"/>
+          <stop offset="1" stop-color="#c42a72"/>
+        </radialGradient>
+        <linearGradient id="bowlG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffffff"/>
+          <stop offset="1" stop-color="#f3e4eb"/>
+        </linearGradient>
+        <filter id="soupBlur" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="26"/></filter>
+      </defs>
+      <ellipse cx="330" cy="290" rx="230" ry="26" fill="#7a0f45" opacity=".18" filter="url(#soupBlur)"/>
+      <path d="M112 128 Q 122 278 330 282 Q 538 278 548 128 Z" fill="url(#bowlG)" stroke="rgba(122,18,70,.18)" stroke-width="2"/>
+      <path d="M128 176 Q 330 236 532 176" fill="none" stroke="#c2185b" stroke-width="5" opacity=".75"/>
+      <path d="M140 200 Q 330 254 520 200" fill="none" stroke="#4d7c0f" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round" opacity=".7"/>
+      <ellipse cx="330" cy="128" rx="218" ry="52" fill="#fff" stroke="rgba(122,18,70,.15)" stroke-width="2"/>
+      <ellipse cx="330" cy="130" rx="204" ry="44" fill="url(#soupG)"/>
+      <g stroke="#3f6212" stroke-width="2" fill="none" stroke-linecap="round" opacity=".85">
+        <path d="M168 128 l10 -6 m-5 3 l2 -7 m-2 7 l7 1"/>
+        <path d="M486 118 l-10 -5 m5 2 l-1 -7 m1 7 l-7 2"/>
+        <path d="M322 152 l9 -5 m-4 2 l1 -6 m-1 6 l6 1"/>
+        <path d="M250 104 l-8 -4 m4 2 l-1 -6"/>
+      </g>
+      <g fill="#ecfccb" stroke="#65a30d" stroke-width="3">
+        <circle cx="196" cy="140" r="12"/><circle cx="470" cy="144" r="11"/><circle cx="380" cy="102" r="10"/><circle cx="262" cy="150" r="9"/>
+      </g>
+      <g class="eggs" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="17" text-anchor="middle" fill="#3b2304">
+        <g transform="translate(232 120)"><ellipse rx="30" ry="18" fill="#fff"/><circle r="13" fill="#fbbf24"/><text y="6">P</text></g>
+        <g transform="translate(300 136)"><ellipse rx="30" ry="18" fill="#fff"/><circle r="13" fill="#fbbf24"/><text y="6">I</text></g>
+        <g transform="translate(366 122)"><ellipse rx="30" ry="18" fill="#fff"/><circle r="13" fill="#fbbf24"/><text y="6">N</text></g>
+        <g transform="translate(432 136)"><ellipse rx="30" ry="18" fill="#fff"/><circle r="13" fill="#fbbf24"/><text y="6">K</text></g>
+      </g>
+      <ellipse cx="660" cy="244" rx="82" ry="22" fill="#fff" stroke="rgba(122,18,70,.15)" stroke-width="2"/>
+      <ellipse cx="660" cy="240" rx="68" ry="15" fill="#f6e9ef"/>
+      <g fill="#e8bd62" stroke="#b9862c" stroke-width="2">
+        <ellipse cx="630" cy="228" rx="24" ry="15"/><ellipse cx="682" cy="230" rx="22" ry="14"/><ellipse cx="656" cy="214" rx="21" ry="13"/>
+      </g>
+      <g stroke="#3f6212" stroke-width="2" stroke-linecap="round"><path d="M640 212 l6 -4 M668 222 l5 -5"/></g>
+    </svg>
+    <p class="soup-note">🥔 Karštos bulvės patiekiamos atskirai – už papildomą mokestį.</p>
+
+    <ol class="steps">
+      <li><span class="letter">P</span><div><h3>Promptas</h3><p class="ingr">burokėliai</p><p>Parašome promptą. Tai pagrindas – be jo nėra nei spalvos, nei sąskaitos.</p></div></li>
+      <li><span class="letter">I</span><div><h3>Iteracija</h3><p class="ingr">agurkai</p><p>Paleidžiame tą patį promptą dar kartą. Šįkart su „prašau“.</p></div></li>
+      <li><span class="letter">N</span><div><h3>Naujiena LinkedIne</h3><p class="ingr">krapai</p><p>Paskelbiame apie tai LinkedIne. Kitaip niekas nepatikės, kad tai įvyko.</p></div></li>
+      <li><span class="letter">K</span><div><h3>Kaina</h3><p class="ingr">kefyras</p><p>Išrašome sąskaitą. Ji sujungia visus ingredientus.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- REZULTATAI -->
+<section id="rezultatai">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Rezultatai</span>
+      <h2 data-corp="Impact'as, kurį galima measure'inti*">Rezultatai, kuriuos galima išmatuoti*</h2>
+      <p class="note">*mes matavome</p>
+    </div>
+
+    <div class="results">
+      <div class="res-row">
+        <div class="res-what">Valdybos pristatymo paruošimas</div>
+        <div class="res-delta mono">4 val. → 45 min → 3 sek. → <b class="grad">−2 val.</b></div>
+        <div class="res-why">DI dabar ruošia pristatymus, kurių niekas neprašė.</div>
+      </div>
+      <div class="res-row">
+        <div class="res-what">El. laiškų tvarkymas</div>
+        <div class="res-delta mono">3 val./sav. → <b class="grad">0</b></div>
+        <div class="res-why">Laiškus rašo DI. Atsakymus irgi rašo DI. Niekas nebeskaito. Visi laimingi.</div>
+      </div>
+      <div class="res-row">
+        <div class="res-what">Analitikų skaičius</div>
+        <div class="res-delta mono">1 → <b class="grad">0</b></div>
+        <div class="res-why">Pakeitėme analitiką. Analitikas dabar dirba pas mus.</div>
+      </div>
+      <div class="res-row">
+        <div class="res-what">Vadovo darbo savaitė</div>
+        <div class="res-delta mono">60 val. → <b class="grad">60 val.</b></div>
+        <div class="res-why">Tačiau 7 iš jų – pokalbiai su DI apie tai, kaip sutaupyti laiko.</div>
+      </div>
+    </div>
+
+    <article class="card case">
+      <div>
+        <span class="eyebrow">Atvejo studija</span>
+        <h3>Kepykla (pavadinimas konfidencialus)</h3>
+        <dl>
+          <dt>Problema</dt><dd>Kepykla kepė duoną.</dd>
+          <dt>Sprendimas</dt><dd>DI agentas, rašantis LinkedIn įrašus apie duonos kepimą.</dd>
+        </dl>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><b class="grad">+340%</b><span>įsitraukimas</span></div>
+        <div class="kpi"><b>−2</b><span>kepėjai</span></div>
+        <div class="kpi"><b>0</b><span>duonos</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- BRANDOS MODELIS -->
+<section id="branda">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">DI brandos modelis</span>
+      <h2>Kur yra jūsų įmonė?</h2>
+      <p>Paspauskite savo lygį. Atsakymas bus individualus.</p>
+    </div>
+    <div class="levels">
+      <button type="button" class="level" data-level="1"><span class="lvl-n">1</span>Girdėjau</button>
+      <button type="button" class="level" data-level="2"><span class="lvl-n">2</span>Bandžiau</button>
+      <button type="button" class="level" data-level="3"><span class="lvl-n">3</span>Turiu Copilot licenciją</button>
+      <button type="button" class="level" data-level="4"><span class="lvl-n">4</span>Kalbu apie tai per vakarėlius</button>
+      <button type="button" class="level" data-level="5"><span class="lvl-n">5</span>Vedu mokymus</button>
+      <button type="button" class="level" data-level="6"><span class="lvl-n">6</span>DI jau nebemadinga, dabar SI</button>
+    </div>
+    <p class="maturity-result" id="maturity-result" aria-live="polite"></p>
+  </div>
+</section>
+
+<!-- MĄSTYMO PARTNERIS -->
+<section id="partneris">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Mąstymo partneris</span>
+      <h2>Mūsų DI su jumis ginčysis.</h2>
+      <p class="lead">Už papildomą mokestį – laimės.</p>
+      <p>DI paruošia. Vadovas sprendžia. Sąskaitą išrašome mes.</p>
+    </div>
+    <div class="chat-mock" aria-label="Pokalbio pavyzdys">
+      <div class="bubble me">Ar turėtume plėstis į Latviją?</div>
+      <div class="bubble bot">Puikus klausimas! 🙌 Štai 5 priežastys, kodėl taip, ir 5 priežastys, kodėl ne.</div>
+      <div class="bubble me">Tai ką daryti?</div>
+      <div class="bubble bot">Sprendimą priima vadovas. 🙂</div>
+      <div class="bubble me">…</div>
+      <div class="bubble bot">Ar norėtumėte, kad tai paversčiau lentele?</div>
+    </div>
+  </div>
+</section>
+
+<!-- NIEKAS -->
+<section id="niekas">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Produktyvumo režimas</span>
+      <h2>DI dirbs, kol jūs <span class="grad">žiūrėsite į nieką</span>.</h2>
+      <p>Moksliškai įrodyta*: kuo mažiau darote jūs, tuo daugiau padaro DI. Išbandykite. Tiesiog nieko nedarykite.</p>
+      <p class="note">*mes taip manome</p>
+    </div>
+    <div class="card void" id="void" aria-live="polite"></div>
+  </div>
+</section>
+
+<div class="garnish" aria-hidden="true"><svg><use href="#g-garnish"/></svg></div>
+
+<!-- PROGRAMOS -->
+<section id="programos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Programos ir prenumerata</span>
+      <h2 data-corp="Training'as as a Service (TaaS)">Vieni mokymai? <span class="grad">Kol jie baigėsi, jie paseno.</span></h2>
+      <p>DI keičiasi kas savaitę. Jūsų komandos žinios – irgi. Todėl mūsų jums reikia ne kartą. Mūsų jums reikia visada.</p>
+    </div>
+
+    <div class="sub-top">
+      <article class="card decay">
+        <span class="eyebrow">Jūsų komandos DI žinių galiojimas</span>
+        <div class="decay-num" id="decay">0:45</div>
+        <div class="meter" aria-hidden="true"><span id="decay-bar" style="width:100%"></span></div>
+        <p class="decay-note" id="decay-note" aria-live="polite">Žinios dar galioja. Kol kas.</p>
+        <p class="muted">Nuo jūsų paskutinių mokymų išėjo <b id="models-since">14</b> naujų modelių.</p>
+      </article>
+
+      <article class="card history">
+        <span class="eyebrow">Ko mes jus mokėme</span>
+        <ol class="timeline">
+          <li><b>2023</b><span>Mokėmės rašyti promptus.</span></li>
+          <li><b>2024</b><span>Promptų nebereikia. Mokėmės kurti agentus.</span></li>
+          <li><b>2025</b><span>Agentų nebereikia. Mokėmės orkestruoti agentus.</span></li>
+          <li><b>2026</b><span>Orkestruoti nebereikia. Mokomės „vibe'inti“.</span></li>
+          <li class="always"><b>Visada</b><span>Reikia mūsų.</span></li>
+        </ol>
+      </article>
+    </div>
+
+    <div class="billing">
+      <div class="seg no-term" role="group" aria-label="Atsiskaitymo dažnumas">
+        <button type="button" data-billing="o" aria-pressed="false">Vieną kartą</button><button type="button" data-billing="m" class="on" aria-pressed="true">Kas mėnesį</button><button type="button" data-billing="r" aria-pressed="false">Už kiekvieną naują modelį</button>
+      </div>
+    </div>
+
+    <div class="pricing" id="subs" data-billing="m">
+      <article class="card price">
+        <span class="eyebrow">Vadovams</span>
+        <h3>DI Pusryčiai</h3>
+        <div class="amount"><span class="b-o">€2 900 <small>+ PVM</small></span><span class="b-m">€1 490 <small>/ mėn.</small></span><span class="b-r">€390 <small>/ modelį</small></span></div>
+        <p class="note"><span class="b-o">Vadovams, kurie nori būti matę DI. Vieną kartą.</span><span class="b-m">Pusryčiai kas pirmadienį. Tie patys, tik su nauju modelio pavadinimu.</span><span class="b-r">Praėjusį mėnesį išėjo 9 modeliai. Jūsų sąskaita – €3 510.</span></p>
+        <ul>
+          <li>Kruasanai ir kava</li>
+          <li>45 min. skaidrių „DI keičia viską“</li>
+          <li>0 praktinių užduočių <small>(kad niekas nesijaudintų)</small></li>
+          <li>Naujas sertifikatas kas kartą. Senas nebegalioja.</li>
+        </ul>
+        <a href="#pokalbis" class="btn btn-ghost js-book">Užsisakyti pusryčius</a>
+      </article>
+
+      <article class="card price featured">
+        <span class="badge">Populiariausias</span>
+        <span class="eyebrow">2 dienos · visai komandai</span>
+        <h3>DI Sodyba</h3>
+        <div class="amount small-amount"><span class="b-o">Kaina aptariama pirtyje</span><span class="b-m">Pirtis kas mėnesį</span><span class="b-r">Nauja sodyba kiekvienam modeliui</span></div>
+        <p class="note"><span class="b-o">Komandos formavimas ir DI hakatonas kaimo sodyboje.</span><span class="b-m">Komanda susiformuoja kas mėnesį. Iš naujo.</span><span class="b-r">Praėjusį mėnesį – 9 sodybos. Komanda pavargo, DI – ne.</span></p>
+        <ul>
+          <li>Pirtis, šašlykai, krepšinis</li>
+          <li>DI hakatonas <small>(neįvyksta)</small></li>
+          <li>Diskusija prie laužo: „O kas, jei DI turi sąmonę?“</li>
+          <li>Ryte niekas neprisimena promptų</li>
+        </ul>
+        <a href="#pokalbis" class="btn btn-primary js-book">Rezervuoti sodybą</a>
+      </article>
+
+      <article class="card price">
+        <span class="eyebrow">Valdyboms · Enterprise</span>
+        <h3>DI Valdybai</h3>
+        <div class="amount"><span class="b-o">€12 000 <small>+ PVM</small></span><span class="b-m">€∞ <small>/ mėn.</small></span><span class="b-r">€12 000 <small>/ modelį</small></span></div>
+        <p class="note"><span class="b-o">Pasakysime valdybai tą patį, ką jūs sakote jau metus. Tik su skaidrėmis.</span><span class="b-m">Tiksliau – visas jūsų DI biudžetas. Konsultantas persikrausto į jūsų biurą.</span><span class="b-r">Kiekvienam modeliui – naujos 87 skaidrės. Valdyba jau atpažįsta mūsų balsą.</span></p>
+        <ul>
+          <li>87 skaidrės, žodis „transformacija“ – ne mažiau kaip 40 kartų</li>
+          <li>Valdyba patvirtina DI biudžetą</li>
+          <li>Biudžetas atitenka mums</li>
+          <li>Jums – padėka protokole</li>
+        </ul>
+        <a href="#pokalbis" class="btn btn-ghost js-book">Susisiekti</a>
+      </article>
+    </div>
+
+    <article class="card detox">
+      <div>
+        <span class="eyebrow">Papildoma paslauga · po 12 mėnesių</span>
+        <h3>DI Detox</h3>
+        <p>Padėsime pašalinti DI, kurį jums įdiegėme pernai. Grąžinsime jūsų analitiką <small class="muted">(jis vis dar dirba pas mus)</small>.</p>
+      </div>
+      <div class="detox-price"><div class="amount">2× <small>diegimo kaina</small></div><a href="#pokalbis" class="btn btn-ghost js-book">Noriu atgal</a></div>
+    </article>
+
+    <div class="sub-fine">
+      <p>Prenumerata atsinaujina automatiškai. Atšaukti galima tik per 20 min. pokalbį. Pokalbių laikai užimti iki 2027 m.</p>
+      <div class="cancel-zone"><button type="button" class="btn btn-ghost btn-sm" id="cancel-sub">Atšaukti prenumeratą</button></div>
+    </div>
+  </div>
+</section>
+
+<div class="garnish" aria-hidden="true"><svg><use href="#g-garnish"/></svg></div>
+
+<!-- ĮRANKIAI -->
+<section id="irankiai">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Nemokami įrankiai</span>
+      <h2>Išbandykite patys. Nemokamai. Kol kas.</h2>
+    </div>
+    <div class="tools">
+      <article class="card tool" id="auditas">
+        <span class="eyebrow">Nemokamas DI auditas</span>
+        <h3>Sužinokite savo įmonės DI brandą per 30 sekundžių</h3>
+        <div id="audit" aria-live="polite"></div>
+      </article>
+
+      <article class="card tool">
+        <span class="eyebrow">DI politikos generatorius</span>
+        <h3>Atitinka ES DI aktą, BDAR ir dar kažką*</h3>
+        <p class="note">*neskaitėme nė vieno. Bet DI skaitė (santrauką).</p>
+        <form id="policy-form" class="form">
+          <label>Įmonės pavadinimas
+            <input id="pf-name" value="UAB „Jūsų įmonė“" maxlength="60" autocomplete="off">
+          </label>
+          <label>Kaip dažnai darbuotojai naudoja DI?
+            <select id="pf-freq">
+              <option value="never">Niekada</option>
+              <option value="some" selected>Kartais</option>
+              <option value="always">Nuolat</option>
+              <option value="we">Mes patys esame DI</option>
+            </select>
+          </label>
+          <label>Ar įmonėje yra teisininkas?
+            <select id="pf-legal">
+              <option value="yes">Taip</option>
+              <option value="no">Ne</option>
+              <option value="gpt" selected>Turime ChatGPT</option>
+            </select>
+          </label>
+          <button class="btn btn-primary" type="submit">Generuoti politiką</button>
+        </form>
+        <div id="policy-out" aria-live="polite"></div>
+      </article>
+    </div>
+
+    <div class="section-head kit-head">
+      <span class="eyebrow">DI įrankių rinkinys</span>
+      <h3 class="kit-title">Kasdieniai įrankiai, dabar su dirbtiniu intelektu ✨</h3>
+      <p>Tie patys įrankiai, kuriuos naudojate kasdien. Tik lėtesni, brangesni ir su DI.</p>
+    </div>
+    <div class="kit">
+      <article class="card mini" data-tool="calc">
+        <div class="mini-head"><h4>DI Skaičiuotuvas</h4><span class="pw">✨ 3 agentai</span></div>
+        <div class="calc-row">
+          <input type="number" id="calc-a" value="2" aria-label="Pirmas skaičius">
+          <select id="calc-op" aria-label="Veiksmas"><option value="+">+</option><option value="-">−</option><option value="*">×</option><option value="/">÷</option></select>
+          <input type="number" id="calc-b" value="2" aria-label="Antras skaičius">
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" data-run="calc">✨ Skaičiuoti su DI</button>
+        <div class="mini-out" aria-live="polite"></div>
+      </article>
+
+      <article class="card mini" data-tool="prompt">
+        <div class="mini-head"><h4>Prompto tobulintojas</h4><span class="pw">✨ PRO</span></div>
+        <input type="text" id="prompt-in" value="parašyk laišką klientui" aria-label="Jūsų promptas" maxlength="140">
+        <button type="button" class="btn btn-primary btn-sm" data-run="prompt">✨ Patobulinti</button>
+        <div class="mini-out" aria-live="polite"></div>
+      </article>
+
+      <article class="card mini" data-tool="caps">
+        <div class="mini-head"><h4>DI DIDŽIOSIOS RAIDĖS</h4><span class="pw">✨ Ultra</span></div>
+        <input type="text" id="caps-in" value="labas rytas, komanda" aria-label="Tekstas" maxlength="140">
+        <button type="button" class="btn btn-primary btn-sm" data-run="caps">✨ Konvertuoti</button>
+        <div class="mini-out" aria-live="polite"></div>
+      </article>
+
+      <article class="card mini" data-tool="decide">
+        <div class="mini-head"><h4>Strateginių sprendimų agentas</h4><span class="pw">✨ Enterprise</span></div>
+        <input type="text" id="decide-in" value="Ar kelti kainas?" aria-label="Strateginis klausimas" maxlength="140">
+        <button type="button" class="btn btn-primary btn-sm" data-run="decide">✨ Priimti sprendimą</button>
+        <div class="mini-out" aria-live="polite"></div>
+      </article>
+
+      <article class="card mini" data-tool="clock">
+        <div class="mini-head"><h4>DI Laikrodis</h4><span class="pw">✨ Beta</span></div>
+        <p class="clock-face mono" id="ai-clock">--:--</p>
+        <p class="note">± 15 min. Atnaujinama kas 15 min., kad taupytume tokenus.</p>
+      </article>
+
+      <article class="card mini ext">
+        <div class="mini-head"><h4>gerAI naršyklės plėtinys</h4><span class="pw">✨ Naujiena</span></div>
+        <p>Prideda DI prie kiekvieno mygtuko internete. Mygtukai veikia taip pat, bet atrodo pažangiau.</p>
+        <button type="button" class="btn btn-primary btn-sm" id="ext-install">Įdiegti nemokamai</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="garnish" aria-hidden="true"><svg><use href="#g-garnish"/></svg></div>
+
+<!-- KOMANDA -->
+<section id="komanda">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Komanda</span>
+      <h2 data-corp="Our people (ir LLM'ai)">1 žmogus ir 4 prenumeratos</h2>
+      <p>Lean komanda. Labai lean.</p>
+    </div>
+
+    <div class="team">
+      <div class="member"><div class="avatar human" aria-hidden="true">🧍</div><b>Žmogus</b><span>Įkūrėjas · moka už prenumeratas</span></div>
+      <div class="member"><div class="avatar" aria-hidden="true">C</div><b>Claude</b><span>Max planas · 3 paskyros, nes vienos neužtenka</span></div>
+      <div class="member"><div class="avatar" aria-hidden="true">G</div><b>ChatGPT</b><span>Pro planas · kol praeina mokėjimas kortele</span></div>
+      <div class="member"><div class="avatar" aria-hidden="true">Ge</div><b>Gemini</b><span>Ultra planas · niekas neprisimena, kodėl</span></div>
+      <div class="member"><div class="avatar" aria-hidden="true">Co</div><b>Copilot</b><span>Atėjo kartu su Office licencija</span></div>
+      <div class="member"><div class="avatar" aria-hidden="true">A</div><b>Agnė</b><span>DI asistentė · nemokama versija</span></div>
+    </div>
+
+    <div class="burn">
+      <article class="card burn-main">
+        <span class="eyebrow">Tokenų deginimas · gyvai</span>
+        <p class="burn-lbl">Šį mėnesį sudeginta tokenų</p>
+        <div class="burn-num" id="tokens">0</div>
+        <div class="meter-head"><span>Savaitės limitas</span><b id="limit-pct">94%</b></div>
+        <div class="meter" aria-hidden="true"><span id="limit-bar" style="width:94%"></span></div>
+        <p class="meter-note" id="limit-note">Limitas atsinaujins po 3 d. 14 val.</p>
+        <dl class="burn-money">
+          <div><dt>Prenumeratos</dt><dd>€1 840 / mėn.</dd></div>
+          <div><dt>Pajamos</dt><dd>€1 200 / mėn.</dd></div>
+          <div><dt>Verslo modelis</dt><dd class="grad">Veikia*</dd></div>
+        </dl>
+        <p class="note">*investuotojai dar nepastebėjo</p>
+      </article>
+      <article class="card burn-tasks">
+        <span class="eyebrow">Tokenai pagal užduotį</span>
+        <ul class="hbars" id="hbars">
+          <li data-v="48000"><span class="hb-l">El. laiškas „Ačiū, gavau“</span></li>
+          <li data-v="310000"><span class="hb-l">Ar šiandien reikia skėčio? <small>(agentas patikrino 14 orų šaltinių)</small></span></li>
+          <li data-v="2100000"><span class="hb-l">Šio puslapio tekstai</span></li>
+          <li data-v="8400000"><span class="hb-l">Bandymas suprasti, kodėl agentas neveikia</span></li>
+          <li data-v="12700000"><span class="hb-l">Agentas bando suprasti, kodėl neveikia kitas agentas</span></li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="values">
+      <span>Mūsų vertybės:</span>
+      <b>Žmogus centre.</b>
+      <b>DI šone.</b>
+      <b class="grad">Sąskaita gale.</b>
+    </div>
+  </div>
+</section>
+
+<!-- KLIENTAI -->
+<section id="klientai" class="clients">
+  <div class="wrap">
+    <p class="logos-title">Mumis pasitiki</p>
+    <div class="logos" aria-label="Klientai (išgalvoti)">
+      <span class="lg l1">UAB „Agentai ir partneriai“</span>
+      <span class="lg l2">Dzūkų grybautojų asociacija</span>
+      <span class="lg l3">Ūkininkas Petras</span>
+      <span class="lg l4">SINERGIJA 360</span>
+      <span class="lg l5">Kepykla Nr. 7</span>
+      <span class="lg l6">VšĮ „Ateities ateitis“</span>
+      <span class="lg l1">UAB „Promptas ir sūnūs“</span>
+      <span class="lg l3">Sodyba „Pas Agentą“</span>
+    </div>
+    <p class="press"><span>Mus minėjo:</span> Portalų komentarai · Mano LinkedIn · Kaimynų Viber grupė · Senelės Facebook · Šis puslapis</p>
+  </div>
+</section>
+
+<div class="garnish" aria-hidden="true"><svg><use href="#g-garnish"/></svg></div>
+
+<!-- DUK -->
+<section id="duk">
+  <div class="wrap narrow">
+    <div class="section-head center">
+      <span class="eyebrow">DUK</span>
+      <h2 data-corp="FAQ'ai">Dažniausiai užduodami klausimai</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Ar DI atims mano darbą?</summary><p>Ne. Mes atimsime.</p></details>
+      <details><summary>Ar reikia programavimo žinių?</summary><p>Ne. Mums irgi nereikėjo.</p></details>
+      <details><summary>Kuo jūs skiriatės nuo kitų DI konsultantų?</summary><p>Mes be hype'o. Visi kiti irgi be hype'o, bet mes – labiau.</p></details>
+      <details><summary>Kokius įrankius naudojate?</summary><p>Esame neutralūs įrankių atžvilgiu. Naudojame Claude, ChatGPT, Gemini, Copilot ir tą naują, kuris išėjo šį rytą.</p></details>
+      <details><summary>Ar galime tiesiog vieną kartą apmokyti komandą?</summary><p>Galite. 2023-aisiais.</p></details>
+      <details><summary>Ar sistema veiks pasibaigus programai?</summary><p>Taip. Iki kito modelio atnaujinimo.</p></details>
+      <details><summary>DI ar AI?</summary><p>Taip.</p></details>
+      <details><summary>O kas tas SI?</summary><p>Superintelektas. Tas pats, kas DI, tik brangesnis. Užjūryje nusprendė, kad „DI“ ir „AI“ jau nebemadinga, tad perėjome ir mes. Viršuje meniu galite persijungti – kainos persijungs kartu.</p></details>
+      <details><summary>Ar galiu išbandyti nemokamai?</summary><p>Taip. Pirmosios 20 minučių nemokamos*.<br><small>*€499 + PVM</small></p></details>
+      <details><summary>Kiek tai kainuoja?</summary><p>Priklauso nuo to, kiek turite.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="pokalbis" class="final">
+  <div class="wrap center">
+    <h2 data-corp="The future is now. O jūs – dar ne on board'e.">Ateitis jau čia. <span class="grad">Jūs – dar ne.</span></h2>
+    <p class="lead">Rezervuokite 20 min. pokalbį ir sužinokite, kodėl jums reikia 40 min. pokalbio.</p>
+    <a class="btn btn-primary btn-lg js-book" href="#pokalbis" data-corp="Book'inti call'ą">Rezervuoti 20 min. pokalbį</a>
+  </div>
+</section>
+
+</main>
+
+<div class="garnish" aria-hidden="true"><svg><use href="#g-garnish"/></svg></div>
+
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <a href="#" class="logo no-term">ger<span class="grad">AI</span><span class="logo-tld">.lt</span></a>
+      <p>Viskas bus gerAI. Patiekiama šalta. 🥣</p>
+    </div>
+    <p class="disclaimer"><b>Parodija.</b> Visi asmenys, įmonės ir skaičiai išgalvoti. Bet koks panašumas į tikras DI konsultacijų svetaines neišvengiamas, nes jos visos vienodos.</p>
+    <p class="fine">© 2026 gerAI. Visi tekstai sugeneruoti. Visos teisės priklauso kažkam Kalifornijoje.</p>
+  </div>
+</footer>
+
+<!-- Booking modal -->
+<div class="modal" id="book-modal" hidden role="dialog" aria-modal="true" aria-labelledby="book-title">
+  <div class="modal-box">
+    <button type="button" class="x" data-close aria-label="Uždaryti">×</button>
+    <span class="eyebrow">Rezervuoti 20 min. pokalbį</span>
+    <h3 id="book-title">Pasirinkite jums patogų laiką</h3>
+    <div class="cal" id="cal"></div>
+    <p class="note">Artimiausias laisvas laikas: <b>2027 m. sausio 3 d., 06:40</b>. Arba šiandien, jei įsigysite <b>Enterprise</b>.</p>
+  </div>
+</div>
+
+<!-- Exit intent modal -->
+<div class="modal" id="exit-modal" hidden role="dialog" aria-modal="true" aria-labelledby="exit-title">
+  <div class="modal-box center">
+    <div class="big-emoji" aria-hidden="true">✋</div>
+    <h3 id="exit-title">Palaukite! Jūsų konkurentai jau naudoja DI.</h3>
+    <p class="muted">Jie irgi nežino, kam. Bet naudoja.</p>
+    <div class="cta-row center">
+      <button type="button" class="btn btn-primary" data-close>Gerai, liksiu</button>
+      <button type="button" class="btn btn-ghost" data-close>Vis tiek išeinu (ir atsiliksiu)</button>
+    </div>
+  </div>
+</div>
+
+<!-- Cookie banner -->
+<div class="cookie card" id="cookie" hidden>
+  <p>🍪 Naudojame slapukus, krapus ir DI. Nežinome, kuris ką daro.</p>
+  <div class="cookie-btns">
+    <button type="button" class="btn btn-primary btn-sm" data-cookie="ok">Priimti viską</button>
+    <button type="button" class="btn btn-ghost btn-sm" data-cookie="sad">Priimti viską, bet liūdniau</button>
+  </div>
+  <small class="muted">Tiesą sakant, šis puslapis jokių slapukų nenaudoja.</small>
+</div>
+
+<!-- Chat -->
+<button type="button" class="chat-launch" id="chat-launch" aria-label="Atidaryti pokalbį su Agne" aria-expanded="false">💬<span class="chat-badge" id="chat-badge">1</span></button>
+<div class="chat" id="chat" hidden>
+  <div class="chat-head">
+    <div class="avatar sm" aria-hidden="true">A</div>
+    <div><b>Agnė</b><small><span class="online"></span>DI asistentė · visada online</small></div>
+    <button type="button" class="x" id="chat-close" aria-label="Uždaryti pokalbį">×</button>
+  </div>
+  <div class="chat-body" id="chat-body" aria-live="polite"></div>
+  <div class="chat-quick" id="chat-quick"></div>
+  <form class="chat-form" id="chat-form">
+    <label class="sr-only" for="chat-input">Jūsų klausimas</label>
+    <input id="chat-input" placeholder="Parašykite klausimą…" autocomplete="off" maxlength="200">
+    <button class="btn btn-primary btn-sm" type="submit">Siųsti</button>
+  </form>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
